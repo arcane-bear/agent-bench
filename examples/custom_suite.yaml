@@ -1,0 +1,23 @@
+name: example-custom-suite
+tasks:
+  - id: capital-france
+    system: "Answer with just the city name."
+    prompt: "What is the capital of France?"
+    expected:
+      contains: "paris"
+    max_tokens: 32
+
+  - id: json-output
+    system: "Respond with a JSON object only. No prose."
+    prompt: 'Return {"status": "ok", "version": 1} exactly.'
+    expected:
+      regex: '"status"\s*:\s*"ok"'
+      format_regex: '^\{'
+    max_tokens: 64
+
+  - id: sum-check
+    system: "Reply with just the number."
+    prompt: "What is 17 plus 25?"
+    expected:
+      equals: "42"
+    max_tokens: 16
