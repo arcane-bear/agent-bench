@@ -11,6 +11,8 @@ Most LLM "evals" focus on one axis: cost, or latency, or a single accuracy numbe
 
 > If you're looking for cost-only tracking, `agent-cost-cli` is the right tool. `agent-bench` is complementary — it measures actual answer **quality** and end-to-end **speed** on top of cost.
 
+Built by [Rapid Claw](https://rapidclaw.dev) — deploy and benchmark AI agents in production.
+
 ---
 
 ## What it does
@@ -216,6 +218,12 @@ ruff check src tests
 Tests use a `FakeProvider` so the full pipeline (runner → scoring → reports) is exercised without hitting any real APIs.
 
 ---
+
+## Learn More
+
+Learn more about [LLM performance benchmarking](https://rapidclaw.dev/blog/how-to-understand-performance-tests) on the Rapid Claw blog.
+
+Visit [rapidclaw.dev](https://rapidclaw.dev) for the full suite of AI agent deployment tools.
 
 ## License
 
